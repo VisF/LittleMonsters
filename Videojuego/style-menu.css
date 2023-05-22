@@ -1,0 +1,46 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: url(img/Combined\ background\ -\ Blue.png);
+    color: #FFFFFF;
+    text-align: center;
+  }
+  
+  header {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: "Your Custom Font", sans-serif;
+    font-size: 32px;
+    color: black;
+  }
+  
+  .menu-container {
+    margin-top: 100px;
+  }
+  
+  h2 {
+    font-family: "Your Custom Font", sans-serif;
+    font-size: 24px;
+    color: black;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .start-button {
+    background-color: #0000FF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .start-button:hover {
+    background-color: #000099;
+  }
+  

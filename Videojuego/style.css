@@ -1,0 +1,134 @@
+body{
+  background: black;
+}
+#canvas{
+  position: absolute;
+  border: 3px solid white;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#character{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  background: url("pink_monster/Pink_Monster_Walk_6.png") repeat-x;
+  transform: scale(2.5);
+  z-index: 1;
+}
+#score {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  z-index: 1;
+}
+
+#reloj {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  z-index: 1;
+}
+
+
+.correr{
+  animation: correr .6s steps(6) infinite; /*cantidad de sprites    */
+}
+
+.saltar{
+  animation: saltar 800ms cubic-bezier(0,0,.5,1) forwards;
+  background: url(pink_monster/Pink_Monster_Jump_8.png);
+
+}
+
+.caer{
+  animation: caer 600ms cubic-bezier(0,0,.5,1) forwards;
+
+}
+
+@keyframes saltar{
+  from{
+    bottom: 20%;
+  }
+
+  to{
+    bottom: 60%;
+  }
+}
+
+@keyframes caer{
+  from{
+    bottom: 60%;
+  }
+
+  to{
+    bottom: 20%;
+  }
+}
+
+@keyframes correr{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: -192px; /*ancho del sprite*/
+  }
+}
+
+.coin {
+  position: absolute;
+  bottom: 40%;
+  width: 225px;
+  height: 225px;
+  background: url(img/Hongo.png) repeat-x;
+  animation: coin 3.7s forwards linear;
+  transform: scale(0.3) rotate(0deg);
+  z-index: 1;
+}
+
+.roca{
+  position:absolute;
+  bottom: 12%;
+  width: 172px;
+  height: 132px;
+  background: url(img/roca.png) repeat-x;
+  animation:roca 7s forwards linear;
+  transform: scale(0.8);
+  z-index: 1;
+}
+
+
+@keyframes roca {
+  from{
+    left: 100%;
+  }
+  to{
+    left: -100%;
+  }
+  
+}
+
+@keyframes coin {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+  100%{
+    transform: scale(0.3) rotate(360deg);
+  }
+}
